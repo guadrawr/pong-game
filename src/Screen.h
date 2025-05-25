@@ -12,7 +12,8 @@ public:
 
   int GetWidth() const { return Width; }
   int GetHeight() const { return Height; }
-  void InitWindow() const;
+  void Window() const;
+  void MidLine() const;
 };
 } // namespace Pong
 #endif
