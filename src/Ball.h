@@ -2,19 +2,24 @@
 #define BALL_H
 #include "Screen.h"
 #include <raylib.h>
+#pragma once
 namespace Pong {
 class Ball {
 private:
-  float BallX, BallY;
+  int BallX, BallY;
   int Radius = 15;
   Color Kolor = {255, 255, 255, 255};
-  int speed_x{7}, speed_y{7};
+  float SpeedX{7.0f}, SpeedY{7.0f};
 
 public:
   Ball(const ScreenSize &Screen)
-      : BallX(Screen.GetWidth() / 2.0f), BallY(Screen.GetHeight() / 2.0f) {}
+      : BallX(Screen.GetWidth() / 2), BallY(Screen.GetHeight() / 2) {}
   int GetX() const { return BallX; }
   int GetY() const { return BallY; }
+  int GetR() const { return Radius; }
+  float GetSpeedX() const { return SpeedX; }
+  float GetSpeedY() const { return SpeedY; }
+  void ReverseSpeedX() { SpeedX *= -1; }
   void Draw();
   void Move();
 };

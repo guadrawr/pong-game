@@ -11,18 +11,17 @@ int main() {
   Pong::CPU CPU(Screen);
   Screen.Window();
   while (WindowShouldClose() == false) {
-
     // Event //
-
+    Player.Control(Ball);
     // Update //
     Ball.Move();
-    Player.Control();
-    // Draw //
+    CPU.AIControl(Ball);
+    //  Draw //
     BeginDrawing();
     ClearBackground(Color{0, 0, 0, 255});
-    Ball.Draw();
     Player.Draw();
     CPU.Draw();
+    Ball.Draw();
     Screen.MidLine();
     EndDrawing();
   }

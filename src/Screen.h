@@ -1,5 +1,6 @@
 #ifndef SCREEN_H
 #define SCREEN_H
+#pragma once
 namespace Pong {
 class ScreenSize {
 private:

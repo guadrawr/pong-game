@@ -8,5 +8,6 @@ void ScreenSize::Window() const {
 }
 void ScreenSize::MidLine() const {
   DrawLine(Width / 2, 0, Width / 2, Height, WHITE);
+  DrawCircleLines(Width / 2, Height / 2, 200, Color(255, 255, 255, 222));
 }
 } // namespace Pong
